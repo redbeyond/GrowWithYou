@@ -1,0 +1,49 @@
+body {
+	background-color: activecaption;
+}
+
+div#box {
+	width: 1080px;
+	position: relative;
+	left: 50%;
+	margin-left: -540px;
+}
+
+p {
+	text-indent: 2em;
+}
+
+#leftside a:LINK, a:VISITED {
+	color: #004080;
+	text-decoration: none;
+}
+
+#leftside a:HOVER, a:ACTIVE {
+	color: white;
+	background-color: darkblue;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 2px;
+}
+
+aside#leftside {
+	float: left;
+	width: 166px;
+	height: 668px;
+	border-right: thin;
+	border-right-style: dashed;
+	border-right-width: 2px;
+	padding: 10px 20px;
+	background-color: white;
+	padding: 10px 20px;
+}
+
+section#content {
+	background-color: white;
+	float: left;
+	width: 832px;
+	height: 668px;
+	padding: 10px 20px;
+	overflow-y: scroll;
+}

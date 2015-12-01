@@ -1,0 +1,62 @@
+body {
+	background-image: url("../images/main/mainbg.png");
+	background-repeat: repeat;
+}
+
+div#box {
+	background-image: url("../images/main/boxbg.png");
+	background-repeat: repeat;
+	width: 1080px;
+	height: 600px;
+	position: relative;
+	left: 50%;
+	margin-left: -540px;
+	border-image: url("../images/main/FrameCorner.png") 64/64px stretch;
+	padding: 30px;
+}
+
+div.upside {
+	background-color: green;
+	width: 270px;
+	height: 133px;
+	position: relative;
+	float: left;
+}
+
+div#upcenter {
+	background-color: #996633;
+	width: 490px;
+	height: 83px;
+	position: relative;
+	float: left;
+	padding: 20px;
+	margin: 5px;
+	border-image: url("../images/main/FrameBorder.png") 33/33px stretch;
+	height: 83px;
+}
+
+div.midside1 {
+	background-color: pink;
+	width: 270px;
+	height: 467px;
+	position: relative;
+	float: left;
+}
+
+div.midside2 {
+	background-color: #d50000;
+	width: 80px;
+	height: 457px;
+	position: relative;
+	float: left;
+	margin:5px;
+	border-image: url("../images/main/side2border.png") 48/40px stretch;
+}
+
+div#midcenter {
+	background-color: yellow;
+	width: 360px;
+	height: 467px;
+	position: relative;
+	float: left;
+}

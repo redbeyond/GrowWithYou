@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../stylesheets/jsxgraph.css">
+<link rel="stylesheet" href="../../stylesheets/book.css">
+
+<script type="text/javascript" src="../../javascripts/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../../javascripts/jsxgraphcore.js"></script>
+<script type="text/javascript"
+	src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<title>第一课</title>
+</head>
+<body>
+	<div id="box">
+		<aside id="leftside">
+			<ul>
+				<li><a href="#example1">平行四边形面积</a></li>
+				<li><a href="#example2">三角形面积</a></li>
+				<li><a href="#example3">梯形面积</a></li>
+				<li><a href="#example4">圆的面积</a></li>
+			</ul>
+		</aside>
+		<section id="content">
+			<h1 id="example1">平行四边形面积公式讲解</h1>
+			<p>先来看面积公式：\[S_{平行四边形} = ah\]</p>
+			<p>让我们来看看平行四边形面积公式，你可以拖动点\(A\)和点\(C\)来观察平行四边形的高有什么变化：</p>
+			<div id="41edf9c5-e904-481f-a785-7514701540ba" class="jxgbox"
+				style="width: 400px; height: 400px; left: 50%; margin-left: -200px;"></div>
+			<script type="text/javascript">
+				(function() {
+					JXG.Options.text.useMathJax = true;
+					var board = JXG.JSXGraph.initBoard(
+							'41edf9c5-e904-481f-a785-7514701540ba', {
+								boundingbox : [ -5, 10, 5, -1 ],
+								axis : true,
+								showNavigation : false,
+								keepAspectRatio : true
+							});
+					var l1 = board.create('line', [ [ -2, 0 ], [ 2, 0 ] ], {
+						color : 'blue'
+					});
+					var pB = board.create('glider', [ -3, 0, l1 ], {
+						name : 'B',
+						fixed : true,
+						color : 'red',
+						size : 6
+					});
+					var pA = board.create('point', [ -2, 4 ], {
+						name : 'A',
+						color : 'red',
+						size : 6
+					});
+					var pC = board.create('glider', [ 2, 0, l1 ], {
+						name : 'C',
+						color : 'red',
+						size : 6
+					});
+					var pD = board.create('parallelpoint', [ pB, pC, pA ], {
+						name : 'D',
+						color : 'blue'
+					});
+					var pl1 = board.create('polygon', [ pA, pB, pC, pD ], {
+						fillColor : 'darkblue'
+					});
+
+					var h1 = board.create('perpendicularsegment', [ l1, pA ], {
+						dash : 3,
+						color : 'red'
+					});
+
+					var ah = board.create('angle', [ pC, h1.point, pA ], {
+						type : 'square'
+					});
+
+					var BC = function() {
+						return pB.Dist(pC).toFixed(1);
+					};
+					board.create('text', [ -4, 8, function() {
+						return '底 = ' + BC();
+					} ], {
+						fixed : true,
+						fontsize : 24
+					});
+					var lenH = function() {
+						return pA.Dist(h1.point).toFixed(1);
+					};
+					board.create('text', [ -4, 7, function() {
+						return '高 = ' + lenH();
+					} ], {
+						fixed : true,
+						fontsize : 24
+					});
+					board.create('text', [ -4, 6, function() {
+						return '面积 = 底 X 高 = ' + (BC() * lenH()).toFixed(2);
+					} ], {
+						fixed : true,
+						fontsize : 24
+					});
+				})();
+			</script>
+			<h1 id="example2">三角形面积公式讲解</h1>
+			<p>看看下面的面积公式：\[S_{三角形} = 2ah\]</p>
+			<p>让我们来看看三角形面积公式是如何得到的：</p>
+			<div id="554713fa-a5bd-442f-b085-eb40bf38170f" class="jxgbox"
+				style="width: 400px; height: 400px; left: 50%; margin-left: -200px;"></div>
+			<script type="text/javascript">
+				(function() {
+					board = JXG.JSXGraph.initBoard(
+							'554713fa-a5bd-442f-b085-eb40bf38170f', {
+								boundingbox : [ -5, 5, 5, -5 ],
+								axis : true,
+								grid : false,
+								keepaspectratio : true
+							});
+				})();
+			</script>
+		</section>
+	</div>
+</body>
+</html>

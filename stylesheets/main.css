@@ -4,8 +4,9 @@ body {
 }
 
 div#box {
-	background-image: url("../images/main/boxbg.png");
-	background-repeat: repeat;
+	/* 	background-image: url("../images/main/boxbg.png");
+	background-repeat: repeat; */
+	background-color: #999922;
 	width: 1080px;
 	height: 600px;
 	position: relative;
@@ -13,6 +14,7 @@ div#box {
 	margin-left: -540px;
 	border-image: url("../images/main/FrameCorner.png") 64/64px stretch;
 	padding: 30px;
+	width: 1080px;
 }
 
 div.upside {
@@ -43,13 +45,26 @@ div.midside1 {
 	float: left;
 }
 
+div.midside1 a:LINK, a:VISITED {
+	text-decoration: none;
+}
+
+div.midside1 a:HOVER, a:ACTIVE {
+	color: white;
+	background-color: darkblue;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 2px;
+}
+
 div.midside2 {
 	background-color: #d50000;
 	width: 80px;
 	height: 457px;
 	position: relative;
 	float: left;
-	margin:5px;
+	margin: 5px;
 	border-image: url("../images/main/side2border.png") 48/40px stretch;
 }
 
@@ -59,4 +74,8 @@ div#midcenter {
 	height: 467px;
 	position: relative;
 	float: left;
+}
+
+div.hiddenInfo {
+	display: none;
 }

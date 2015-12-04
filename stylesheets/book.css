@@ -9,8 +9,57 @@ div#box {
 	margin-left: -540px;
 }
 
+#leftside li {
+	list-style-type: square;
+}
+
+#content li {
+	list-style-type: none;
+}
+
 p {
 	text-indent: 2em;
+}
+
+section#content h1 {
+	text-align: center;
+}
+
+section#content h2 {
+	text-indent: 1em;
+}
+
+section#content h2 {
+	text-indent: 1em;
+}
+
+section#content h3 {
+	text-indent: 2em;
+}
+
+section#content h4 {
+	text-indent: 3em;
+}
+
+section#content h5 {
+	text-indent: 4em;
+}
+
+section#content h6 {
+	text-indent: 5em;
+}
+
+aside#leftside {
+	float: left;
+	width: 166px;
+	height: 668px;
+	border-right: thin;
+	border-right-style: dashed;
+	border-right-width: 2px;
+	padding: 10px 20px;
+	background-color: white;
+	padding: 10px 20px;
+	overflow-y: scroll;
 }
 
 #leftside a:LINK, a:VISITED {
@@ -27,16 +76,18 @@ p {
 	padding: 2px;
 }
 
-aside#leftside {
-	float: left;
-	width: 166px;
-	height: 668px;
-	border-right: thin;
-	border-right-style: dashed;
-	border-right-width: 2px;
-	padding: 10px 20px;
-	background-color: white;
-	padding: 10px 20px;
+#content a:LINK, a:VISITED {
+	color: #004080;
+	text-decoration: none;
+}
+
+#content a:HOVER, a:ACTIVE {
+	color: white;
+	background-color: darkblue;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 2px;
 }
 
 section#content {

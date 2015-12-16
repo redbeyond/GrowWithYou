@@ -79,3 +79,7 @@ div#midcenter {
 div.hiddenInfo {
 	display: none;
 }
+
+area:HOVER {
+	cursor: move;
+}
